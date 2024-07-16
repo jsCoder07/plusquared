@@ -1,0 +1,38 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer components {
+  .shadowMain {
+    box-shadow: -3px -3px 7px #ffffff, 3px 3px 5px #ceced1;
+    background: #ecf0f3;
+    border-radius: 10px;
+  }
+  .btnShadow {
+    box-shadow: -3px -3px 7px #ffffff, 3px 3px 5px #ceced1;
+    background: #ecf0f3;
+    position: relative;
+    z-index: 5;
+    border-radius: 0.5rem;
+  }
+  .btnShadow:hover::before {
+    position: absolute;
+    content: "";
+    top: 0;
+    bottom: 0;
+    right: 0;
+    left: 0;
+    box-shadow: inset -3px -3px 7px #ffffff, inset 3px 3px 5px #ceced1;
+    background: #ecf0f3;
+    z-index: -1;
+    border-radius: 0.5rem;
+  }
+  /* ... */
+}
+
+.scrollhide::-webkit-scrollbar {
+  display: none;
+}
+.scrollhide {
+  scrollbar-width: none;
+}
